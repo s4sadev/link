@@ -1,12 +1,20 @@
-listanum = input().split()
-print(listanum)
-listanum = [int(num) for num in listanum]
-print(listanum)
-maior = 0
+listaorig= input().split(" ")
+listaorig = [int(num) for num in listaorig]
+
+listanova = []
+for i in listaorig:
+    listanova.append(i)
+
+menor = 0
 numcres = []
-for i in range(3):
-    print(i)
-    menor = min(listanum)
+
+for i in range(3):#conversao de lista
+    menor = min(listanova)
     numcres.append(menor)
-    listanum.remove(menor)
-print(numcres)
+    listanova.remove(menor)
+
+for i in numcres: #impressao lista convertida
+    print(i)
+print()
+for i in listaorig:#impressao de lista original
+    print(i)
